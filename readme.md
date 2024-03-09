@@ -25,6 +25,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Screenshots
 
-![App Screenshot](https://ibb.co/Xbm9qwH)
+![App Screenshot](https://i.ibb.co/JKXN9hZ/Screenshot-1709969040.png)
 
 
