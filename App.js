@@ -1,5 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
+import { Entypo } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { Linking } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -44,18 +48,37 @@ export default function App() {
         </Text>
       </View>
 
-      <View style={styles.row}>
-        <Image
-          source={require("./assets/octocat-1709958392792.png")}
-          style={styles.avatar}
-        />
-        <Text style={[styles.textContainer, styles.textDistance]}>
-          Tanvir Hasan Prince
-          {"\n"}
-          <Text style={{ color: "blue" }}>@tanvir.hasan.prince</Text>
-          {"\n"}
-          Joined on 9th March 2024
-        </Text>
+      <View style={styles.lastSection}>
+        <View style={styles.row}>
+          <Entypo name="location-pin" size={40} color="black" />
+          <Text style={[styles.textContainer, styles.textDistance]}>Dhaka</Text>
+        </View>
+
+        <View style={styles.row}>
+          <Feather name="paperclip" size={40} color="green" />
+          <Text
+            style={[styles.textContainer, styles.textDistance]}
+            onPress={() =>
+              Linking.openURL("https://tanvir-hasan-prince.vercel.app/")
+            }
+          >
+            Visit my website
+          </Text>
+        </View>
+
+        <View style={styles.row}>
+          <AntDesign name="twitter" size={40} color="black" />
+          <Text style={[styles.textContainer, styles.textDistance]}>
+            @tanvirhasanprince
+          </Text>
+        </View>
+
+        <View style={styles.row}>
+          <AntDesign name="github" size={24} color="black" />
+          <Text style={[styles.textContainer, styles.textDistance]}>
+            TanvirHasanPrince
+          </Text>
+        </View>
       </View>
 
       <StatusBar style="auto" />
@@ -76,9 +99,16 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 0,
     backgroundColor: "#d3d3d3",
+    borderRadius: 50,
+    margin: 20,
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
+  },
+  lastSection: {
+    marginTop: 60,
+    paddingLeft: 20,
+    marginBottom: 20,
   },
   row: {
     flexDirection: "row",
